@@ -6,6 +6,7 @@
   "author": "jonatas625421 <jonatas.fonseca26@hotmail.com>",
   "license": "MIT",
   "devDependencies": {
-    "mocha": "^11.5.0"
+    "jest": "^30.0.3",
+    "mocha": "^11.7.1"
   }
 }
