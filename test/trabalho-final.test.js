@@ -1,15 +1,8 @@
 
 /* 
-describe -> agrupador de testes
-it -> implementação do teste
-TDD
-    crio o teste
-    vejo o teste falhar
-    crio a implementação para o teste passar
-    rodo o teste de novo
-    refatoro o código
-    ASSERTION/ASSERCAO
-     verificar se um comportamento está de acordo com o esperado
+Trabalho final CI
+Baseado na Disciplina de Programação para Automação de testes
+Rodar testes em uma pipe manual
 */
     import assert from 'node:assert';
     import { exibirNomeDogFormatado } from '../trabalho-final.js';
@@ -23,7 +16,5 @@ TDD
         it('deve retornar uma string vazia se não passar nome', () => {
             assert.strictEqual(exibirNomeDogFormatado(''), '')
         })
-        it('segundo teste', () => {
-            throw new Error()
-        })
+        
     })
