@@ -9,30 +9,29 @@ on:
 # trabalhos/tarefas dentro do pipeline = jobs
 
 jobs:
-  e2e-tests:
+  test:
     #maquina que o job vai executar
     runs-on: ubuntu-latest
 
     # passos do script de build
     steps:
       # clone do projeto
-      - uses: actions/checkout@v4
+      - name: checkout repositório
+        uses: actions/checkout@v3
 
       # instalação do node
-      - uses: actions/setup-node@v4
+      - uses: actions/setup-node@v3
         with:
-          node-version: 22.x
+          node-version: 18
 
       # instalação do Yarn
       - name: Instalando Yarn
-        run: npm install -g yarn
+        run:  yarn install
 
-      # instalação das dependências
-      - name: Instalando dependências
-        run: yarn
+      # Executando testes
+      - name: Executar testes
+        run: yarn test
 
-      # instalação do Mocha
-      - name: Instalando Mocha
-        run: yarn mocha trabalho-final.js
+   
 
       

@@ -11,16 +11,17 @@ TDD
     ASSERTION/ASSERCAO
      verificar se um comportamento está de acordo com o esperado
 */
-    import { exibirNomeDogFormatado } from '../trabalho-final.js'
-    import assert from 'node:assert'
-
+    import assert from 'node:assert';
+    import { exibirNomeDogFormatado } from '../trabalho-final.js';
+    
     describe('Testes do Projeto', () => {
         it('deve exibir o nome do dog com letras maiúsculas', () => {
             assert.strictEqual(exibirNomeDogFormatado('Mimosa'), 'MIMOSA')
 
         // verifique se: valor atual é igual ao valor esperado
         })
-        it('primeiro teste', () => {
+        it('deve retornar uma string vazia se não passar nome', () => {
+            assert.strictEqual(exibirNomeDogFormatado(''), '')
         })
         it('segundo teste', () => {
             throw new Error()

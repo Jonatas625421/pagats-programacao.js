@@ -1,12 +1,18 @@
 {
   "name": "cypress_facu_pos",
   "version": "1.0.0",
+  "type": "module",
+   "scripts": {
+  "test": "mocha"
+  },
   "main": "index.js",
   "repository": "https://github.com/Jonatas625421/pagats-programacao.js.git",
   "author": "jonatas625421 <jonatas.fonseca26@hotmail.com>",
   "license": "MIT",
+
   "devDependencies": {
-    "jest": "^30.0.3",
+    
     "mocha": "^11.7.1"
   }
+ 
 }
