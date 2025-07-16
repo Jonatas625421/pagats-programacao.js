@@ -1,35 +1,28 @@
 
-import assert from 'node:assert';
+/* 
+describe -> agrupador de testes
+it -> implementação do teste
+TDD
+    crio o teste
+    vejo o teste falhar
+    crio a implementação para o teste passar
+    rodo o teste de novo
+    refatoro o código
+    ASSERTION/ASSERCAO
+     verificar se um comportamento está de acordo com o esperado
+*/
+    import { exibirNomeDogFormatado } from '../conceitos/testes-de-unidade.js'
+    import assert from 'node:assert'
 
-import {
-  geradorDeTagsDeIdentificacao,
-  verificarSePodeSerAdotado,
-  calcularConsumoDeRacao,
-  decidirTipoDeAtividadePorPorte,
-  buscarDadoAsync
-} from '../trabalho/trabalho.js';
+    describe('Testes do Projeto', () => {
+        it('deve exibir o nome do dog com letras maiúsculas', () => {
+            assert.strictEqual(exibirNomeDogFormatado('Mimosa'), 'MIMOSA')
 
-describe('Testes da disciplina - fundamentos JS', () => {
-  
-  it('QUANDO informar um nome para o Pet, DEVE ser impresso na tag com letras maiúsculas', () => {
-    assert.strictEqual(geradorDeTagsDeIdentificacao('Pantera'), 'PANTERA');
-  });
-
-  it('QUANDO a idade = 1 + porte M, DEVE ser permitida a adoção', () => {
-    assert.strictEqual(verificarSePodeSerAdotado(1, 'M'), true)
-  })
-
-  it('QUANDO o peso = 14.5, DEVE ser retornado 4350 gramas para o consumo diário', () => {
-    assert.strictEqual(calcularConsumoDeRacao('Pitoco', 1, 14.5), 4350)
-  });
-
-  it('QUANDO o porte = pequeno, DEVE ser retornada a atividade adequada', () => {
-    assert.strictEqual(decidirTipoDeAtividadePorPorte('pequeno'), 'brincar dentro de casa')
-  });
-
-  it('QUANDO buscar dado de exemplo, DEVE retornar um valor de forma assíncrona', async () => {
-    const resultado = await buscarDadoAsync();
-    assert.strictEqual(resultado, 'Pipoca');
-  });
-
-});
+        // verifique se: valor atual é igual ao valor esperado
+        })
+        it('primeiro teste', () => {
+        })
+        it('segundo teste', () => {
+            throw new Error()
+        })
+    })
