@@ -11,7 +11,7 @@ TDD
     ASSERTION/ASSERCAO
      verificar se um comportamento está de acordo com o esperado
 */
-    import { exibirNomeDogFormatado } from '../conceitos/testes-de-unidade.js'
+    import { exibirNomeDogFormatado } from '../trabalho-final.js'
     import assert from 'node:assert'
 
     describe('Testes do Projeto', () => {
